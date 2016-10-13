@@ -1,4 +1,6 @@
-
+/**
+ * ATM Class
+ */
 
 package pkg161013.mybankmachine;
 import java.util.*;
@@ -8,6 +10,11 @@ public class ATM {
     private double remain,a,p,i,n;
     Scanner input=new Scanner(System.in);
     
+    /**
+     * constructor
+     * pre: The balance of the account.( money remain )
+     * post: Change the value of money remain or display it
+     */
     public ATM(double r){
         System.out.println("1.deposit");
         System.out.println("2.withdraw");
@@ -54,12 +61,22 @@ public class ATM {
             remain=a;
         }
         
-        
     }
+    
+    /**
+     * Return the number of remain back to MyBankMachine
+     * pre: none
+     * post: value of remain has been returned
+     */
     public double remain(){
         return(remain);
     }
     
+    /**
+     * Decision about keep running the program or not
+     * pre: none
+     * post: return a value between 1 and 0 
+     */
     public int over(){
         System.out.println("Input 1 to continue \nInput 0 to quit");
         x=input.nextInt();
